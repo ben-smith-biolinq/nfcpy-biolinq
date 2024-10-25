@@ -1,3 +1,11 @@
+Biolinq fork of nfcpy
+=====================
+Install wheel building requirements (one time):
+``pip install -r requirements-biolinq-fork.txt``
+
+Build a wheel for install in to the best-test-environment:
+``python -m build``
+
 Python module for near field communication
 ==========================================
 

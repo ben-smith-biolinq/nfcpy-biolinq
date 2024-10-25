@@ -32,9 +32,9 @@ logging.getLogger(__name__).setLevel(logging.INFO)
 
 # METADATA ####################################################################
 
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 
-__title__ = "nfcpy"
+__title__ = "nfcpy_biolinq"
 __description__ = "Python module for Near Field Communication."
 __uri__ = "https://github.com/nfcpy/nfcpy"
 
