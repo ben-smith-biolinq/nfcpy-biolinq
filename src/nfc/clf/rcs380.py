@@ -211,9 +211,10 @@ class Chipset(object):
         if self.transport is not None:
             cmd = bytearray([0xD6, cmd_code]) + cmd_data
             self.transport.write(bytes(Frame(cmd)))
-            ack = Frame(self.transport.read())
+            timeout_ms = 1000
+            ack = Frame(self.transport.read(timeout=timeout_ms))
             if ack.type == 'ack':
-                rsp = Frame(self.transport.read())
+                rsp = Frame(self.transport.read(timeout=timeout_ms))
                 if rsp.type == 'data':
                     if rsp.data[0] == 0xD7 and rsp.data[1] == cmd_code + 1:
                         return rsp.data[2:]
