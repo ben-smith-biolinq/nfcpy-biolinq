@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nfcpy_biolinq"
+readme = "README.rst"
+version = "1.0.5" # forked from nfcpy 1.0.4
+requires-python = ">=3.9"
+dependencies = ["libusb1", "pyserial", "ndeflib", "pydes"]
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+
+# ... other project metadata fields as listed in:
+#     https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
